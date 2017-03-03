@@ -1,8 +1,8 @@
 #include "ScoreBar.h"
 
 ScoreBar::ScoreBar() {
-	setScoreValue();
-	setLevelValue();
+	initScoreValue();
+	initLevelValue();
 	setSpriteLife(550, 30);
 }
 
@@ -16,7 +16,7 @@ void ScoreBar::drawBoard(sf::RenderWindow &window) {
 	window.draw(*spriteLife);
 }
 
-void ScoreBar::setScoreValue() {
+void ScoreBar::initScoreValue() {
 	scoreValue.setFont(textFont);
 	scoreValue.setFillColor(sf::Color::Black);
 	scoreValue.setPosition(100, 30);
@@ -31,17 +31,15 @@ void ScoreBar::addScoreValue(int value) {
 	scoreValue.setString(msg.str());
 }
 
-void ScoreBar::setLevelValue() {
+void ScoreBar::initLevelValue() {
 	levelValue.setFont(textFont);
 	levelValue.setFillColor(sf::Color::Black);
 	levelValue.setPosition(WIDTH_WINDOW - 300, 30);
-	level = 1;
-	addLevelValue(0);
 }
 
-void ScoreBar::addLevelValue(int value) {
+void ScoreBar::setLevelValue(int value) {
 	ostringstream msg;
-	msg << "Level : " << (level += value);
+	msg << "Level : " << value;
 	levelValue.setString(msg.str());
 }
 
@@ -62,13 +60,17 @@ void ScoreBar::changeLife(bool loose) {
 	}
 }
 
+int ScoreBar::getScore() {
+	return score;
+}
+
 sf::Font ScoreBar::textFont;
-void ScoreBar::setFontText() {
+void ScoreBar::initFontText() {
 	textFont.loadFromFile("../ressources/verdana.ttf");
 }
 
 sf::Texture ScoreBar::imageLife;
-void ScoreBar::setLifeImg() {
+void ScoreBar::initLifeImg() {
 	if (!imageLife.loadFromFile("../ressources/hearts.png")) {
 		cerr << "Impossible de charger hearts.png" << endl;
 		return;

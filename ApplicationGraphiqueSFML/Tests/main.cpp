@@ -12,8 +12,8 @@ int main(int argc, char *argv[]) {
 	Poisson::setPoissonImg();
 	Caravel::setCaravelImg();
 	
-	ScoreBar::setLifeImg();
-	ScoreBar::setFontText();
+	ScoreBar::initLifeImg();
+	ScoreBar::initFontText();
 
 	MyGame(); 
 	return 0; 

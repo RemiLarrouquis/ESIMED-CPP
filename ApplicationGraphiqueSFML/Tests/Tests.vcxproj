@@ -118,11 +118,13 @@
     <ClCompile Include="Caravel.cpp" />
     <ClCompile Include="Collision.cpp" />
     <ClCompile Include="Level1.cpp" />
+    <ClCompile Include="Level2.cpp" />
     <ClCompile Include="Levels.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyGame.cpp" />
     <ClCompile Include="Poisson.cpp" />
     <ClCompile Include="ScoreBar.cpp" />
+    <ClCompile Include="Transition.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AniSprite.h" />
@@ -130,10 +132,12 @@
     <ClInclude Include="Collision.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Level1.h" />
+    <ClInclude Include="Level2.h" />
     <ClInclude Include="Levels.h" />
     <ClInclude Include="MyGame.h" />
     <ClInclude Include="Poisson.h" />
     <ClInclude Include="ScoreBar.h" />
+    <ClInclude Include="Transition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

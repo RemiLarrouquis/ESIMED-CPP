@@ -19,6 +19,12 @@
     <Filter Include="Fichiers sources\Levels">
       <UniqueIdentifier>{433fce8a-f2b7-4615-80c8-58ebbeda3e69}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Objets">
+      <UniqueIdentifier>{332f7f74-da31-4d2f-b8df-1d9e4cd0bf72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Objets">
+      <UniqueIdentifier>{5fa05961-7b1e-40ac-93a3-278a5095549d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -30,15 +36,6 @@
     <ClCompile Include="MyGame.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Poisson.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Collision.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Caravel.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="ScoreBar.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -48,7 +45,22 @@
     <ClCompile Include="Level1.cpp">
       <Filter>Fichiers sources\Levels</Filter>
     </ClCompile>
+    <ClCompile Include="Caravel.cpp">
+      <Filter>Fichiers sources\Objets</Filter>
+    </ClCompile>
+    <ClCompile Include="Poisson.cpp">
+      <Filter>Fichiers sources\Objets</Filter>
+    </ClCompile>
     <ClCompile Include="AniSprite.cpp">
+      <Filter>Fichiers sources\Objets</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Fichiers sources\Objets</Filter>
+    </ClCompile>
+    <ClCompile Include="Level2.cpp">
+      <Filter>Fichiers sources\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Transition.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -57,15 +69,6 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Header.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Poisson.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Collision.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Caravel.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="ScoreBar.h">
@@ -78,6 +81,21 @@
       <Filter>Fichiers d%27en-tête\Levels</Filter>
     </ClInclude>
     <ClInclude Include="AniSprite.h">
+      <Filter>Fichiers d%27en-tête\Objets</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Fichiers d%27en-tête\Objets</Filter>
+    </ClInclude>
+    <ClInclude Include="Poisson.h">
+      <Filter>Fichiers d%27en-tête\Objets</Filter>
+    </ClInclude>
+    <ClInclude Include="Caravel.h">
+      <Filter>Fichiers d%27en-tête\Objets</Filter>
+    </ClInclude>
+    <ClInclude Include="Level2.h">
+      <Filter>Fichiers d%27en-tête\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Transition.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

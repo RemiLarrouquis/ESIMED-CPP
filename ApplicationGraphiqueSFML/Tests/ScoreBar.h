@@ -11,17 +11,18 @@ public:
 
 	void drawBoard(sf::RenderWindow &window);
 	// Score
-	void setScoreValue();
+	void initScoreValue();
 	void addScoreValue(int value);
+	int getScore();
 	// Level
-	void setLevelValue();
-	void addLevelValue(int value);
+	void initLevelValue();
+	void setLevelValue(int value);
 	// Life
-	static void setLifeImg();
+	static void initLifeImg();
 	void setSpriteLife(int x, int y);
 	void changeLife(bool loose);
 	// Font
-	static void setFontText();
+	static void initFontText();
 private:
 	// Bare en top
 	static sf::Font textFont;
@@ -36,7 +37,6 @@ private:
 
 	// Conteurs
 	int score;
-	int level;
 };
 
 #endif

@@ -21,6 +21,7 @@ namespace mygame {
 			sf::RenderWindow window; 
 
 			Levels *levels;
+			int levelNum;
 
 			// Fonctions
 			void ProcessEvents();

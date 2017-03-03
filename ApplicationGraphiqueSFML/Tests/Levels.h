@@ -16,6 +16,9 @@ public:
 	void ProcessStates();
 	void DrawScreen(sf::RenderWindow &window);
 
+	// Fonctions publiques
+	int getScore();
+
 	// Membres publics
 	vector<Poisson> poissons;
 	ScoreBar score;

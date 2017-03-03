@@ -14,7 +14,7 @@ void Level1::generatePoisson(sf::RectangleShape gameBoard) {
 		poissons.push_back(
 			Poisson(gameBoard.getSize().x + gameBoard.getPosition().x - 20,
 				RAND_X_Y(100 + 10, HEIGHT_GAME - 20),
-				RAND_X_Y(1, 10)
+				RAND_X_Y(1, 20)
 			)
 		);
 	}

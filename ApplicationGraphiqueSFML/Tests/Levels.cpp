@@ -83,3 +83,7 @@ void Levels::setGameBoard() {
 	gameBoard.setOutlineColor(sf::Color::Black);
 	gameBoard.setFillColor(GRAY);
 }
+
+int Levels::getScore() {
+	return score.getScore();
+}
