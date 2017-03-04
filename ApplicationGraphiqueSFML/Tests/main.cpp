@@ -15,6 +15,9 @@ int main(int argc, char *argv[]) {
 	ScoreBar::initLifeImg();
 	ScoreBar::initFontText();
 
+	Transition::initFont();
+	Transition::initBackgroundImg();
+
 	MyGame(); 
 	return 0; 
 }

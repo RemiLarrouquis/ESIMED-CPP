@@ -7,7 +7,7 @@
 #include "Caravel.h"
 #include "ScoreBar.h"
 #include "Levels.h"
-#include "Level1.h"
+#include "Transition.h"
 
 namespace mygame { 
 
@@ -20,8 +20,13 @@ namespace mygame {
 			// Membres
 			sf::RenderWindow window; 
 
+			// Gestion des niveaux
 			Levels *levels;
 			int levelNum;
+
+			// Gestion des transitions (menu + changement niveaux)
+			Transition trans;
+			bool gameStart;
 
 			// Fonctions
 			void ProcessEvents();

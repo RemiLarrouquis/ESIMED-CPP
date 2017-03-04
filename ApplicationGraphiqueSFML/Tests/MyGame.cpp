@@ -14,6 +14,8 @@ using namespace mygame;
 MyGame::MyGame() : window(sf::VideoMode(WIDTH_WINDOW, HEIGHT_WINDOW), "Fisher man") {
 	window.setFramerateLimit(60);
 
+	gameStart = false;
+
 	levels = new Level1();
 	levels->score.setLevelValue(1);
 	levelNum = 1;
@@ -31,7 +33,12 @@ MyGame::~MyGame() {
 
 void MyGame::DrawScreen() {
 	window.clear(LIGHT_GRAY);
-	levels->DrawScreen(window);
+	if (gameStart) {
+		levels->DrawScreen(window);
+	}
+	else {
+		trans.drawMenuStart(window);
+	}
 	window.display();
 }
 
@@ -42,22 +49,24 @@ void MyGame::ProcessEvents() {
 			|| sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 			window.close();
 		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Return)) {
-			window.close();
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+			gameStart = true;
 		}
 	}
 	levels->ProcessEvents();
 }
 
 void MyGame::ProcessStates() {
-	levels->ProcessStates();
-	if (levels->getScore() > 50 && levelNum == 1) {
-		int score = levels->getScore();
-		delete levels;
-		levels = new Level2();
-		levels->score.addScoreValue(score);
-		levels->score.setLevelValue(2);
-		levelNum = 2;
+	if (gameStart) {
+		levels->ProcessStates();
+		if (levels->getScore() > 50 && levelNum == 1) {
+			int score = levels->getScore();
+			delete levels;
+			levels = new Level2();
+			levels->score.addScoreValue(score);
+			levels->score.setLevelValue(2);
+			levelNum = 2;
+		}
 	}
 }
 
