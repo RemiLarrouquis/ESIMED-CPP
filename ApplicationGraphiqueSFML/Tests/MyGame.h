@@ -27,6 +27,11 @@ namespace mygame {
 			// Gestion des transitions (menu + changement niveaux)
 			Transition trans;
 			bool gameStart;
+			// Delai messages
+			int count;
+			int delaiEnd;
+			// Fonction de temporisation
+			void wait(int delai);
 
 			// Fonctions
 			void ProcessEvents();

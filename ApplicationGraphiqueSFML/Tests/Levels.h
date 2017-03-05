@@ -16,7 +16,7 @@ public:
 	void ProcessStates();
 	void DrawScreen(sf::RenderWindow &window);
 
-	// Fonctions publiques
+	// Récupère le score
 	int getScore();
 
 	// Membres publics
@@ -24,19 +24,20 @@ public:
 	ScoreBar score;
 	sf::Text levelName;
 	
+	// Définie le nom du niveau
+	virtual string getLevelName() = 0;
+
 private:
 	// Membres
 	Caravel caravel;
 	sf::RectangleShape gameBoard;
 
-	// Level
-	virtual void setLevelName() = 0;
-
-	// Poisson
-	virtual void generatePoisson(sf::RectangleShape gameBoard) = 0;
-
 	// Emplacement du jeu
 	void setGameBoard();
+
+
+	// Fonction de génération des poissons
+	virtual void generatePoisson(sf::RectangleShape gameBoard) = 0;
 };
 
 #endif

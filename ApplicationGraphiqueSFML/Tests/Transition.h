@@ -9,7 +9,12 @@ public:
 	Transition();
 	~Transition();
 
+	// Affiche le titre du niveau
+	void drawTextLevels(sf::RenderWindow &window, string texte);
+
+	// Permet d'afficher le menu de démarage
 	void drawMenuStart(sf::RenderWindow &window);
+
 	void getTitre();
 	void getStart();
 

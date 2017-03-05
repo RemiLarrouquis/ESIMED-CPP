@@ -1,8 +1,9 @@
 #include "Level2.h"
 #include "Levels.h"
+#include "Transition.h"
 
 Level2::Level2() : Levels() {
-
+	
 }
 
 Level2::~Level2() {
@@ -20,8 +21,6 @@ void Level2::generatePoisson(sf::RectangleShape gameBoard) {
 	}
 }
 
-void Level2::setLevelName() {
-	ostringstream msg;
-	msg << "Fish Revenge";
-	levelName.setString(msg.str());
+string Level2::getLevelName() {
+	return "Level 2 : Fish Revenge";
 }

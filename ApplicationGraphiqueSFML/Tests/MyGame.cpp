@@ -15,6 +15,8 @@ MyGame::MyGame() : window(sf::VideoMode(WIDTH_WINDOW, HEIGHT_WINDOW), "Fisher ma
 	window.setFramerateLimit(60);
 
 	gameStart = false;
+	delaiEnd = false;
+	count = 0;
 
 	levels = new Level1();
 	levels->score.setLevelValue(1);
@@ -34,7 +36,13 @@ MyGame::~MyGame() {
 void MyGame::DrawScreen() {
 	window.clear(LIGHT_GRAY);
 	if (gameStart) {
-		levels->DrawScreen(window);
+		if (delaiEnd) {
+			levels->DrawScreen(window);
+		}
+		else {
+			trans.drawTextLevels(window, levels->getLevelName());
+			wait(DELAI_TRANSITION);
+		}
 	}
 	else {
 		trans.drawMenuStart(window);
@@ -59,14 +67,25 @@ void MyGame::ProcessEvents() {
 void MyGame::ProcessStates() {
 	if (gameStart) {
 		levels->ProcessStates();
-		if (levels->getScore() > 50 && levelNum == 1) {
+		if (levels->getScore() > END_LEVEL_1 && levelNum == 1) {
+			// Récupère le score en cours
 			int score = levels->getScore();
 			delete levels;
+			// On passe au niveau suivant
 			levels = new Level2();
 			levels->score.addScoreValue(score);
 			levels->score.setLevelValue(2);
 			levelNum = 2;
+			// Permet d'afficher le message de transition
+			delaiEnd = false;
 		}
+	}
+}
+
+void MyGame::wait(int delai) {
+	if ((count++) == delai) {
+		count = 0;
+		delaiEnd = true;
 	}
 }
 

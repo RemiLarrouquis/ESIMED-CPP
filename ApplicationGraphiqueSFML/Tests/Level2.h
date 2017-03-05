@@ -15,7 +15,7 @@ public:
 private:
 
 	// Level
-	void setLevelName();
+	string getLevelName();
 
 	//Poisson
 	void generatePoisson(sf::RectangleShape gameBoard);

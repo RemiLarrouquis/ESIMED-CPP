@@ -22,4 +22,12 @@ using namespace std;
 #define WIDTH_GAME 1000
 #define HEIGHT_GAME 600
 
+// Levels
+#define END_LEVEL_1 50
+#define DELAI_TRANSITION 50
+
+// Texts
+#define TITRES_SIZE 80
+#define SS_TITRES_SIZE 50
+
 #endif
