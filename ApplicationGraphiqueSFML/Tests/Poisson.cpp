@@ -63,7 +63,7 @@ int Poisson::getRecompense() {
 
 sf::Texture Poisson::imagePoisson ;
 void Poisson::setPoissonImg() {
-	if (!imagePoisson.loadFromFile("../ressources/fish2mw5.png")) {
+	if (!imagePoisson.loadFromFile(IMG_POISSON)) {
 		cerr << "Impossible de charger fish2mw5.png" << endl;
 		return;
 	}

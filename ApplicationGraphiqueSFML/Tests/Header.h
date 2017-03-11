@@ -30,4 +30,12 @@ using namespace std;
 #define TITRES_SIZE 80
 #define SS_TITRES_SIZE 50
 
+// Files
+#define IMG_POISSON "../ressources/fish2mw5.png"
+#define IMG_CARAVEL "../ressources/caravel.png"
+#define IMG_LIFE "../ressources/hearts.png"
+#define IMG_FONDMARIN "../ressources/fullFondMarin.jpg"
+#define FONT_VERDANA "../ressources/verdana.ttf"
+#define FONT_GOODDOG "../ressources/GoodDog.otf"
+
 #endif

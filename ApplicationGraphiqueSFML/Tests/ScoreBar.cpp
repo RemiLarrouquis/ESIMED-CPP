@@ -66,12 +66,12 @@ int ScoreBar::getScore() {
 
 sf::Font ScoreBar::textFont;
 void ScoreBar::initFontText() {
-	textFont.loadFromFile("../ressources/verdana.ttf");
+	textFont.loadFromFile(FONT_VERDANA);
 }
 
 sf::Texture ScoreBar::imageLife;
 void ScoreBar::initLifeImg() {
-	if (!imageLife.loadFromFile("../ressources/hearts.png")) {
+	if (!imageLife.loadFromFile(IMG_LIFE)) {
 		cerr << "Impossible de charger hearts.png" << endl;
 		return;
 	}

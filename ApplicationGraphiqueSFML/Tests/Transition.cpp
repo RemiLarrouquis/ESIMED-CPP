@@ -53,12 +53,12 @@ Transition::~Transition() {
 
 sf::Font Transition::textFont;
 void Transition::initFont() {
-	textFont.loadFromFile("../ressources/GoodDog.otf");
+	textFont.loadFromFile(FONT_GOODDOG);
 }
 
 sf::Texture Transition::imageBackground;
 void Transition::initBackgroundImg() {
-	if (!imageBackground.loadFromFile("../ressources/fullFondMarin.jpg")) {
+	if (!imageBackground.loadFromFile(IMG_FONDMARIN)) {
 		cerr << "Impossible de charger fullFondMarin.jpg" << endl;
 		return;
 	}
