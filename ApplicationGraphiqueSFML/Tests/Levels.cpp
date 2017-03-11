@@ -35,10 +35,7 @@ void Levels::ProcessEvents() {
 void Levels::ProcessStates() {
 	
 	caravel.confirmMove(gameBoard);
-	vector<Poisson>::iterator itNext;
 	for (vector<Poisson>::iterator it = poissons.begin(); it != poissons.end();) {
-		itNext = it;
-		itNext++; // On veut le suivant
 		if (Collision::PixelPerfectTest(caravel, *it)) {
 			if ((*it).getRecompense() < 0) {
 				score.changeLife(true);
@@ -46,8 +43,7 @@ void Levels::ProcessStates() {
 			score.addScoreValue((*it).getRecompense());
 			it = poissons.erase(it);
 		}
-		else if ((*it).outOfBound(gameBoard) 
-			|| (itNext != poissons.end() && Collision::PixelPerfectTest(*itNext, *it))) {
+		else if ((*it).outOfBound(gameBoard)) {
 			it = poissons.erase(it);
 		}
 		else {
