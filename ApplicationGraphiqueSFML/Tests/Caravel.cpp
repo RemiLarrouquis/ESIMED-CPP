@@ -49,7 +49,7 @@ void Caravel::initSpeed(int speed) {
 
 sf::Texture Caravel::imageCaravel;
 void Caravel::setCaravelImg() {
-	if (!imageCaravel.loadFromFile("../ressources/caravel.png")) {
+	if (!imageCaravel.loadFromFile(IMG_CARAVEL)) {
 		cerr << "Impossible de charger caravel.png" << endl;
 		return;
 	}

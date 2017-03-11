@@ -2,7 +2,7 @@
 #include "Levels.h"
 
 Level1::Level1() : Levels() {
-
+	
 }
 
 Level1::~Level1() {
@@ -20,8 +20,6 @@ void Level1::generatePoisson(sf::RectangleShape gameBoard) {
 	}
 }
 
-void Level1::setLevelName() {
-	ostringstream msg;
-	msg << "Fish Paradise" ;
-	levelName.setString(msg.str());
+string Level1::getLevelName() {
+	return "Level 1 : Fish Paradise";
 }
