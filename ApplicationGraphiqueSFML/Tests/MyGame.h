@@ -20,6 +20,9 @@ namespace mygame {
 			// Membres
 			sf::RenderWindow window; 
 
+			// Démarage du jeu
+			void initGameStart();
+
 			// Gestion des niveaux
 			Levels *levels;
 			int levelNum;
@@ -27,6 +30,8 @@ namespace mygame {
 			// Gestion des transitions (menu + changement niveaux)
 			Transition trans;
 			bool gameStart;
+			bool ending;
+			bool goodEnding;
 			// Delai messages
 			int count;
 			int delaiEnd;

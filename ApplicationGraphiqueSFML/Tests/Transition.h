@@ -15,8 +15,20 @@ public:
 	// Permet d'afficher le menu de démarage
 	void drawMenuStart(sf::RenderWindow &window);
 
-	void getTitre();
-	void getStart();
+	// Affiche l'ecran de fin. (si true, affiche la victoire)
+	void drawEndScrean(sf::RenderWindow &window, bool goodEnding);
+
+	// Initialise l'écran de démarage
+	void initStartScrean();
+
+	// Initialise l'écran de fin (game over)
+	void initGameOverScrean();
+
+	// Initialise l'écran de fin (victoire)
+	void initWinScrean();
+
+	// Permet de centrer les messages
+	void centreText(sf::Text *texte, float offsetX, float offsetY);
 
 	static void initFont();
 	static void initBackgroundImg();
@@ -28,6 +40,10 @@ private:
 	sf::Sprite *spriteBackground;
 	sf::Text *textTitre;
 	sf::Text *textStart;
+	sf::Text *textReStart;
+	sf::Text *textGameOver;
+	sf::Text *textWin;
 };
+
 
 #endif

@@ -29,10 +29,12 @@ public:
 	// Life
 	// Initialise la bare de vie
 	void setSpriteLife(int x, int y);
-	// Change l'état ed la vie (true la vie diminue)
+	// Change l'état deS la vie (true la vie diminue)
 	void changeLife(bool loose);
 	// Charge l'image de la vie
 	static void initLifeImg();
+	//Retourne la vie
+	int getLife();
 	// Font
 	static void initFontText();
 
@@ -50,6 +52,7 @@ private:
 
 	// Conteurs
 	int score;
+	int life;
 };
 
 #endif

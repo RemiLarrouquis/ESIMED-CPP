@@ -11,13 +11,15 @@ Level2::~Level2() {
 }
 
 void Level2::generatePoisson(sf::RectangleShape gameBoard) {
-	if (RAND_X_Y(0, 50) == 0) {
-		poissons.push_back(
-			Poisson(gameBoard.getSize().x + gameBoard.getPosition().x - 20,
-				RAND_X_Y(100 + 10, HEIGHT_GAME - 30),
-				RAND_X_Y(1, 10)
-			)
+	if (RAND_X_Y(0, 35) == 0) {
+		Poisson *newPoisson = new Poisson(
+			gameBoard.getSize().x + gameBoard.getPosition().x - 20,
+			RAND_X_Y(100 + 10, HEIGHT_GAME - 20)
 		);
+		newPoisson->setRatio(1, 5, 0);
+		newPoisson->setPoints(15, -10, 0);
+		newPoisson->initPoisson();
+		poissons.push_back(*newPoisson);
 	}
 }
 
