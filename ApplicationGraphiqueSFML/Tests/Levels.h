@@ -17,12 +17,11 @@ public:
 	void DrawScreen(sf::RenderWindow &window);
 
 	// Récupère le score
-	int getScore();
+	ScoreBar* getScore();
 
 	// Membres publics
 	vector<Poisson> poissons;
 	ScoreBar score;
-	sf::Text levelName;
 	
 	// Définie le nom du niveau
 	virtual string getLevelName() = 0;
@@ -30,6 +29,7 @@ public:
 private:
 	// Membres
 	Caravel caravel;
+	sf::Text levelName;
 	sf::RectangleShape gameBoard;
 
 	// Emplacement du jeu

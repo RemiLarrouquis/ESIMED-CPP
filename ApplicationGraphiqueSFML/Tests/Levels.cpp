@@ -80,6 +80,6 @@ void Levels::setGameBoard() {
 	gameBoard.setFillColor(GRAY);
 }
 
-int Levels::getScore() {
-	return score.getScore();
+ScoreBar* Levels::getScore() {
+	return &score;
 }

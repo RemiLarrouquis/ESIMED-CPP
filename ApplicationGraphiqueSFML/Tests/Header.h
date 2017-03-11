@@ -24,7 +24,8 @@ using namespace std;
 
 // Levels
 #define END_LEVEL_1 50
-#define DELAI_TRANSITION 50
+#define END_LEVEL_2 100
+#define DELAI_TRANSITION 60
 
 // Texts
 #define TITRES_SIZE 80

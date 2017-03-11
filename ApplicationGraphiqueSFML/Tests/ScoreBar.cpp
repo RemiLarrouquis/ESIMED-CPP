@@ -4,6 +4,7 @@ ScoreBar::ScoreBar() {
 	initScoreValue();
 	initLevelValue();
 	setSpriteLife(550, 30);
+	life = 5;
 }
 
 ScoreBar::~ScoreBar() {
@@ -54,14 +55,20 @@ void ScoreBar::setSpriteLife(int x, int y) {
 void ScoreBar::changeLife(bool loose) {
 	if (loose) {
 		spriteLife->UpdateMan(1);
+		life--;
 	}
 	else {
 		spriteLife->UpdateMan(-1);
+		life++;
 	}
 }
 
 int ScoreBar::getScore() {
 	return score;
+}
+
+int ScoreBar::getLife() {
+	return life;
 }
 
 sf::Font ScoreBar::textFont;
